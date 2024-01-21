@@ -1,0 +1,34 @@
+
+CREATE TABLE `users` (
+  `userId` VARCHAR(50) NOT NULL,
+  `firstName` VARCHAR(50),
+  `lastName` VARCHAR(50),
+  `emailId` VARCHAR(50) NOT NULL UNIQUE,
+  `mobileNo` VARCHAR(50),
+  `dob` VARCHAR(50),
+  `createdDate` VARCHAR(50),
+  `lastUpdatedDate` VARCHAR(50),
+  `password` VARCHAR(50),
+  PRIMARY KEY (`userId`)); 
+  
+CREATE TABLE `contacts` (
+  `contactId` INT(11) PRIMARY KEY AUTO_INCREMENT,
+  `contactName` VARCHAR(50),
+  `contactEmailId` VARCHAR(50),
+  `contactMobileNO` VARCHAR(50) NOT NULL,
+  `contactDob` VARCHAR(50),
+  `userId` VARCHAR(50) NOT NULL,
+  FOREIGN KEY (userId) REFERENCES users(userId));
+
+insert into users(userId,firstName,lastName,emailId,mobileNo,dob,createdDate,lastUpdatedDate,password)
+values('punya','punyasmruti','nayak','punya@gmail.com','9962428121','11-05-1980','26-09-200','26-09-200','punya');
+
+insert into contacts(contactName,contactEmailId,contactMobileNO,contactDob,userId)
+values('aswini','asini@gmail.com','12345','01-01-2000','punya');
+
+insert into contacts(contactName,contactEmailId,contactMobileNO,contactDob,userId)
+values('pankaj','pankaj@gmail.com','123456','01-01-2005','punya');
+
+commit;
+
+
