@@ -4,7 +4,7 @@
   <artifactId>project-students-courses-enrollment-jdbc-webapp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-  
+            <!-- This is a comment in a Maven pom.xml file -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
